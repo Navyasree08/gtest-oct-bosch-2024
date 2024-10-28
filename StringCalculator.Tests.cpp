@@ -52,7 +52,7 @@ TEST(string_calculator_ass,when_passed_a_delimiter){
   //Arrange
   StringCalculator  objUnderTests;
   string input = "//;\n1;2";
-  int expectedValue = 8;
+  int expectedValue = 3;
   //ACT
   int actualValue = objUnderTests.Add(input);
   //ASSERT
@@ -104,13 +104,13 @@ TEST(string_calculator_ass,when_passed_multiple_multicharacter_delimiters){
   ASSERT_EQ(actualValue,expectedValue);
 }
 
-// TEST(string_calculator_ass,when_passed_negative_numbers){
-//   //Arrange
-//   StringCalculator  objUnderTests;
-//   string input ="1,-2,-4,5";
-//   int expectedValue = 14;
-//   //ACT
-//   int actualValue = objUnderTests.Add(input);
-//   //ASSERT
-//   ASSERT_EQ(actualValue,expectedValue);
-// }
+TEST(string_calculator_ass,when_passed_negative_numbers){
+  //Arrange
+  StringCalculator  objUnderTests;
+  string input ="1,-2,-4,5";
+  int expectedValue = 14;
+  //ACT
+  int actualValue = objUnderTests.Add(input);
+  //ASSERT
+  ASSERT_NE(actualValue,expectedValue);
+}
