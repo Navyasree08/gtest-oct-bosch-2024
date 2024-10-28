@@ -104,15 +104,8 @@ TEST(string_calculator_ass,when_passed_multiple_multicharacter_delimiters){
   ASSERT_EQ(actualValue,expectedValue);
 }
 
-TEST(string_calculator_ass,when_passed_negative_numbers){
-  //Arrange
-  StringCalculator  objUnderTests;
-  string input ="1,-2,-4,5";
-  int expectedValue = 14;
-  //ACT
-  int actualValue = objUnderTests.Add(input);
-  //ASSERT
-  EX
-  EXPECT_THROW( std::string("Negatives not allowed: -2,-4"));
-
+TEST(string_calculator_add, ThrowsExceptionForNegativeNumbers) {
+    StringCalculator objUnderTest;
+    objUnderTest.Add("1,-2,-4,5");
+    ASSERT_EQ(err.what(), std::string("Negatives not allowed: -2,-4"));
 }
