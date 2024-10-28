@@ -91,7 +91,7 @@ TEST_F(StringCalculatorAddFixture, Multiple_Multicharacter_delimiter){
 
 TEST_F(StringCalculatorAddFixture, negative_numbers){
   string input = "1,-2,-4,5";
-  ASSERT_THROW(objUnderTest.Add(input), std::invalid_argument);
+  ASSERT_THROW(objUnderTest->Add(input), std::invalid_argument);
 }
 
 TEST_F(StringCalculatorAddFixture, negative_numbers_Try_catch){
