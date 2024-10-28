@@ -21,7 +21,7 @@ TEST_F(string_calculator_add,positive_cases){
     ASSERT_EQ(objUnderTest->Add("1"), 1);
     ASSERT_EQ(objUnderTest->Add("1,2"), 3);
     ASSERT_EQ(objUnderTest->Add("//;\n1;2"), 3);
-    ASSERT_EQ(objUnderTest->Add("42,1001,3",45);
+    ASSERT_EQ(objUnderTest->Add("42,1001,3"),45);
     ASSERT_EQ(objUnderTest->Add("//[***]\n8***2***3"), 13);
     ASSERT_EQ(objUnderTest->Add("//[*][%]\n4*2%3"), 9);
     ASSERT_EQ(objUnderTest->Add("//[**][%^]\n4**1%^9"), 14);
