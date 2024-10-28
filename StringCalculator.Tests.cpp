@@ -112,7 +112,7 @@ TEST(string_calculator_add, when_passed_negative_numbers) {
 TEST(string_calculator_add, when_passed_negative_numbers_Exception) {
     StringCalculator objUnderTest;
     try {
-        calculator.Add("1,-2,-4,5");
+        objUnderTest.Add("1,-2,-4,5");
     } catch (const std::invalid_argument& e) {
         EXPECT_STREQ(e.what(), "Negatives not allowed: -2,-4");
     }
