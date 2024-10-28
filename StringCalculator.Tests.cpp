@@ -9,8 +9,8 @@ TEST(string_calculator_ass,when_passed_a_single_number_returns_0_for_Empty){
 
 
   //ACT
-  int actualValue = objUnderTest.Add(input);
+  int actualValue = objUnderTests.Add(input);
 
   //ASSERT
-  ASSERT_EQ(actualValue,0);
+  ASSERT_EQ(actualValue,expectedValue);
 }
