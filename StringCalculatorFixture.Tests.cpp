@@ -1,5 +1,5 @@
 #include "StringCalculator.h"
-#include <gtest/gtests.h>
+#include <gtest/gtest.h>
 
 class StringCalculatorAddFixture: public testing::Test{
   protected: 
