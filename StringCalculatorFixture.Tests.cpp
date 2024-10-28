@@ -28,7 +28,7 @@ TEST_F(string_calculator_add,positive_cases){
 }
 
 TEST_F(string_calculator_add, ThrowsExceptionForNegativeNumbers) {
-    objUnderTest->Add("1,-2,-4,5");
+
     ASSERT_THROW(objUnderTest->Add("1,-2,-4,5"), std::invalid_argument);
     try {
         objUnderTest->Add("1,-2,-4,5");
