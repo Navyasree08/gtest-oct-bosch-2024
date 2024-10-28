@@ -112,5 +112,6 @@ TEST(string_calculator_ass,when_passed_negative_numbers){
   //ACT
   int actualValue = objUnderTests.Add(input);
   //ASSERT
-  ASSERT_NE(actualValue,expectedValue);
+  EXPECT_DEATH({objUnderTests.Add(input)}, "Negatives not allowed: -2,-4");
+
 }
