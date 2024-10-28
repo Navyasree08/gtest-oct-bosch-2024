@@ -10,7 +10,7 @@ class StringCalculatorAddFixture: public testing::Test{
   void TearDown(){
     delete objUnderTest;
   }
-}
+};
 
 TEST_F(StringCalculatorAddFixture, Returns_0_For_Empty){
   string input = "";
