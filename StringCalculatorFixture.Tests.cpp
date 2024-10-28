@@ -26,13 +26,6 @@ TEST_F(StringCalculatorAddFixture, Returns_0_For_0){
   ASSERT_EQ(actualValue, expectedValue);
 }
 
-TEST_F(StringCalculatorAddFixture, Returns_0_For_0){
-  string input = "0";
-  int expectedValue = 0;
-  int actualValue = objUnderTest->Add(input);
-  ASSERT_EQ(actualValue, expectedValue);
-}
-
 TEST_F(StringCalculatorAddFixture, Returns_1_For_1){
   string input = "1";
   int expectedValue = 1;
@@ -94,4 +87,18 @@ TEST_F(StringCalculatorAddFixture, Multiple_Multicharacter_delimiter){
   int expectedValue = 14;
   int actualValue = objUnderTest->Add(input);
   ASSERT_EQ(actualValue, expectedValue);
+}
+
+TEST_F(StringCalculatorAddFixture, negative_numbers){
+  string input = "1,-2,-4,5";
+  ASSERT_THROW(objUnderTest.Add(input), std::invalid_argument);
+}
+
+TEST_F(StringCalculatorAddFixture, negative_numbers_Try_catch){
+  string input = "1,-2,-4,5";
+    try {
+        objUnderTest->Add(input);
+    } catch (const std::invalid_argument& e) {
+        EXPECT_STREQ(e.what(), "Negatives not allowed: -2,-4");
+    }
 }
