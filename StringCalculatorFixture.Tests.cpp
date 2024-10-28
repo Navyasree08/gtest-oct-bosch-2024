@@ -81,14 +81,6 @@ TEST_F(StringCalculatorAddFixture, Multiple_Multicharacter_delimiter){
   int actualValue = objUnderTest->Add(input);
   ASSERT_EQ(actualValue, expectedValue);
 }
-
-TEST_F(StringCalculatorAddFixture, Multiple_Multicharacter_delimiter){
-  string input = "//[**][%^]\n4**1%^9";
-  int expectedValue = 14;
-  int actualValue = objUnderTest->Add(input);
-  ASSERT_EQ(actualValue, expectedValue);
-}
-
 TEST_F(StringCalculatorAddFixture, negative_numbers){
   string input = "1,-2,-4,5";
   ASSERT_THROW(objUnderTest->Add(input), std::invalid_argument);
