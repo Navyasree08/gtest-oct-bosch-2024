@@ -3,7 +3,7 @@
 #include <string>
 using namespace std;
 
-class BNFSpeedSensor{
+class BNFSpeedSensor : public ISpeedSensor{
         public:
             int   getCurrentSpeed(){
                 std::random_device rd;
