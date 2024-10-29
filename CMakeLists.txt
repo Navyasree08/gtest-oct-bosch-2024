@@ -18,9 +18,7 @@ enable_testing()
 add_compile_options("--coverage")
 add_executable(
   unittestcode
-  StringCalculator.cpp
-  StringCalculatorFixture.Tests.cpp
- 
+  TestChallenge.cpp
  )
 target_link_libraries(
   unittestcode
