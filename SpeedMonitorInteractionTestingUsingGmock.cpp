@@ -30,7 +30,7 @@ TEST(SpeedMonitorTestSuite, loggerInteractionTesting)
   objUnderTest.monitor(&communicator, &SpeedSensor, &Logger);
 }
 
-TEST(SpeedMonitorTestSuite, loggerInteractionTesting)
+TEST(SpeedMonitorTestSuite, InteractionTesting)
 {
   SpeedMonitor objUnderTest(40);
   MockCommunicator communicator;
