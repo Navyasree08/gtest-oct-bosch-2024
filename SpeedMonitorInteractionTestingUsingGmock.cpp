@@ -1,6 +1,7 @@
 #include "SpeedMonitor.h"
 #include <gmock/gmock.h>
 using testing::StrEq;
+using testing::Return;
 
 class MockLogger : public ILogger{
 public:
