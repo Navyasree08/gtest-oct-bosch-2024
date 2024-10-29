@@ -19,7 +19,7 @@ add_compile_options("--coverage")
 add_executable(
   unittestcode
   SpeedMonitor.cpp
-  SpeedMonitor.Tests.cpp
+  SpeedMonitorInteractionTestingUsingGmock.cpp
  )
 target_link_libraries(
   unittestcode
