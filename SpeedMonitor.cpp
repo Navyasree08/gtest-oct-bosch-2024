@@ -1,5 +1,5 @@
 #include "SpeedMonitor.h"
-void SpeedMonitor::monitor(IMessageCommunicator* communicator,ISpeedSensor* sensor,ILogger* logger);{
+void SpeedMonitor::monitor(IMessageCommunicator* communicator,ISpeedSensor* sensor,ILogger* logger){
             if(_speedThreshold  < 1 || _speedThreshold > 100){
               logger->write("_speedThreshold value must be in the ramge {1-100} " +to_string( _speedThreshold) + "\n";
             }
